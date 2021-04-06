@@ -16,10 +16,8 @@ struct FruitDetailView: View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .center, spacing: 20) {
-                    // Header
                     FruitHeaderView(fruit: fruit)
                     VStack(alignment: .leading, spacing: 20) {
-                        // Title
                         Text(fruit.title)
                             .font(.largeTitle)
                             .fontWeight(.heavy)
@@ -31,16 +29,16 @@ struct FruitDetailView: View {
                         
                         // Nutrients
                         
-                        // Subheadline
                         Text("Learn more about \(fruit.title)".uppercased())
                             .fontWeight(.bold)
                             .foregroundColor(fruit.gradientColors[1])
 
-                        // Descripitioin
                         Text(fruit.description)
                             .multilineTextAlignment(.leading)
                         
-                        // Link
+                        SourceLinkView()
+                            .padding(.top, 10)
+                            .padding(.bottom, 40)
                     }//: VStack
                     .padding(.horizontal, 20)
                     .frame(maxWidth: 640, alignment: .center)
