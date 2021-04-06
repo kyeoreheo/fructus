@@ -22,12 +22,12 @@ struct FruitDetailView: View {
                             .font(.largeTitle)
                             .fontWeight(.heavy)
                             .foregroundColor(fruit.gradientColors[1])
-                        // Header
+                        
                         Text(fruit.headline)
                             .font(.headline)
                             .multilineTextAlignment(.leading)
                         
-                        // Nutrients
+                        FruitNutrientsView(fruit: fruit)
                         
                         Text("Learn more about \(fruit.title)".uppercased())
                             .fontWeight(.bold)
